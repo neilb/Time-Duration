@@ -1,13 +1,13 @@
 
-require 5;
 package Time::Duration;
-# Time-stamp: "2001-10-24 23:50:20 MDT"           POD is at the end.
-$VERSION = '1.01';
+# Time-stamp: "2002-10-08 01:04:09 MDT"           POD is at the end.
+$VERSION = '1.02';
 require Exporter;
 @ISA = ('Exporter');
 @EXPORT = qw( later later_exact earlier earlier_exact
               ago ago_exact from_now from_now_exact
               duration duration_exact
+              concise
             );
 @EXPORT_OK = ('interval', @EXPORT);
 
@@ -17,6 +17,16 @@ use constant DEBUG => 0;
 # ALL SUBS ARE PURE FUNCTIONS
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+sub concise ($) {
+  my $string = $_[0];
+  #print "in : $string\n";
+  $string =~ tr/,//d;
+  $string =~ s/\band\b//;
+  $string =~ s/\b(year|day|hour|minute|second)s?\b/substr($1,0,1)/eg;
+  $string =~ s/\s*(\d+)\s*/$1/g;
+  return $string;
+}
 
 sub later {
   interval(      $_[0], $_[1], ' earlier', ' later', 'right then'); }
@@ -213,7 +223,7 @@ but that's not improperly expressed, so you loop around and get
 
 =head1 NAME
 
-Time::Duration -- rounded or exact English expression of durations
+Time::Duration - rounded or exact English expression of durations
 
 =head1 SYNOPSIS
 
@@ -358,6 +368,14 @@ Same as later($seconds), except that the returned value is an exact
 
 The same as later(-$seconds), later(-$seconds, $precision), 
 later_exact(-$seconds).  For example, earlier(120) is "2 minutes earlier".
+
+
+=item concise( I<function(> ... ) )
+
+Concise takes the string output of one of the above functions and makes
+it more concise.  For example, 
+C<< ago(4567) >> returns "1 hour and 16 minutes ago", but
+C<< concise(ago(4567)) >> returns "1h16m ago".
 
 =back
 

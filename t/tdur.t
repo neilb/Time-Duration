@@ -1,12 +1,11 @@
 # Before `make install' is performed this script should be runnable with
 # `make test'. After `make install' it should work as `perl test.pl'
-# Time-stamp: "2001-10-24 23:45:47 MDT"
 
 use strict;
 use Test;
 
 my @them;
-BEGIN { plan('tests' => 105) };
+BEGIN { plan('tests' => 135) };
 BEGIN { print "# Perl version $] under $^O\n" }
 
 use Time::Duration;
@@ -19,7 +18,7 @@ use constant DAY    =>   24 * HOUR;
 use constant YEAR   =>  365 * DAY;
 
  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Basic tests...
+print "# Basic tests...\n";
 
 ok( sub{duration(   0)}, '0 seconds');
 ok( sub{duration(   1)}, '1 second');
@@ -43,7 +42,7 @@ ok( sub{from_now(-2)}, '2 seconds ago');
 
  
  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Advanced tests...
+print "# Advanced tests...\n";
 
 my $v;  #scratch var
 
@@ -184,7 +183,7 @@ ok(sub {later_exact( $v   )}, '364 days, 23 hours, 59 minutes, and 59 seconds la
 
 
 
-# And an advanced one to put duration thru its paces:
+print "# And an advanced one to put duration thru its paces...\n";
 $v = YEAR + DAY + 2 * HOUR + 59;
 ok(sub {duration(       $v   )}, '1 year and 1 day');
 ok(sub {duration(       $v, 3)}, '1 year, 1 day, and 2 hours');
@@ -194,5 +193,54 @@ ok(sub {duration(      -$v, 3)}, '1 year, 1 day, and 2 hours');
 ok(sub {duration_exact(-$v   )}, '1 year, 1 day, 2 hours, and 59 seconds');
 
 
+#~~~~~~~~
+
+print "# Some tests of concise() ...\n";
+
+ok( sub{concise duration(   0)}, '0s');
+ok( sub{concise duration(   1)}, '1s');
+ok( sub{concise duration(  -1)}, '1s');
+ok( sub{concise duration(   2)}, '2s');
+ok( sub{concise duration(  -2)}, '2s');
+  
+ok( sub{concise later(   0)}, 'right then');
+ok( sub{concise later(   2)}, '2s later');
+ok( sub{concise later(  -2)}, '2s earlier');
+ok( sub{concise earlier( 0)}, 'right then');
+ok( sub{concise earlier( 2)}, '2s earlier');
+ok( sub{concise earlier(-2)}, '2s later');
+  
+ok( sub{concise ago(      0)}, 'right now');
+ok( sub{concise ago(      2)}, '2s ago');
+ok( sub{concise ago(     -2)}, '2s from now');
+ok( sub{concise from_now( 0)}, 'right now');
+ok( sub{concise from_now( 2)}, '2s from now');
+ok( sub{concise from_now(-2)}, '2s ago');
+
+$v = YEAR + DAY + 2 * HOUR + -1;
+ok(sub {concise later(       $v   )}, '1y1d later');
+ok(sub {concise later(       $v, 3)}, '1y1d2h later');
+ok(sub {concise later_exact( $v   )}, '1y1d1h59m59s later');
+
+$v = YEAR + DAY + 2 * HOUR + 59;
+ok(sub {concise later(       $v   )}, '1y1d later');
+ok(sub {concise later(       $v, 3)}, '1y1d2h later');
+ok(sub {concise later_exact( $v   )}, '1y1d2h59s later');
+
+$v = YEAR + - DAY + - 1;
+ok(sub {concise later(       $v   )}, '364d later');
+ok(sub {concise later(       $v, 3)}, '364d later');
+ok(sub {concise later_exact( $v   )}, '363d23h59m59s later');
+
+$v = YEAR + - 1;
+ok(sub {concise later(       $v   )}, '1y later');
+ok(sub {concise later(       $v, 3)}, '1y later');
+ok(sub {concise later_exact( $v   )}, '364d23h59m59s later');
+
+
+
 # That's it.
+print "# And one for the road.\n";
+ok 1;
+print "# Done with of ", __FILE__, "\n";
 

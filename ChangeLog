@@ -1,6 +1,10 @@
 Revision history for Perl extension Time::Duration
-                                        Time-stamp: "2001-10-25 00:07:14 MDT"
+                                        Time-stamp: "2002-10-08 01:04:50 MDT"
 
+2002-10-08  Sean M. Burke  sburke@cpan.org
+
+	* Release 1.02 -- added concise().
+	
 2001-10-25  Sean M. Burke  sburke@netadventure.net
 
 	* Release 1.01 -- first release version.

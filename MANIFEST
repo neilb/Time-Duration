@@ -1,6 +1,7 @@
 ChangeLog
 Duration.pm
 MANIFEST
+MANIFEST.SKIP
 Makefile.PL
-test.pl
 README
+t/tdur.t
