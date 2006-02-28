@@ -1,7 +1,7 @@
 
 package Time::Duration;
-# Time-stamp: "2002-10-08 01:04:09 MDT"           POD is at the end.
-$VERSION = '1.02';
+# POD is at the end.
+$VERSION = '1.03';
 require Exporter;
 @ISA = ('Exporter');
 @EXPORT = qw( later later_exact earlier earlier_exact
@@ -428,7 +428,7 @@ ever told him to use Time::Duration.
 
 =head1 COPYRIGHT AND DISCLAIMER
 
-Copyright 2001, Sean M. Burke C<sburke@cpan.org>, all rights
+Copyright 2006, Sean M. Burke C<sburke@cpan.org>, all rights
 reserved.  This program is free software; you can redistribute it
 and/or modify it under the same terms as Perl itself.
 
@@ -438,6 +438,7 @@ merchantability or fitness for a particular purpose.
 
 =head1 AUTHOR
 
+Current maintainer Avi Finkel, C<avi@finkel.org>; Original author
 Sean M. Burke, C<sburke@cpan.org>
 
 =cut

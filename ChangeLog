@@ -1,5 +1,8 @@
 Revision history for Perl extension Time::Duration
-                                        Time-stamp: "2002-10-08 01:04:50 MDT"
+
+2006-02-28  Avi Finkel     avi@finkel.org
+
+  * Release 1.03 -- Updating new maintainer information.
 
 2002-10-08  Sean M. Burke  sburke@cpan.org
 

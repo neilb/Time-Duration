@@ -1,5 +1,4 @@
 # This -*- perl -*- script writes the Makefile for Time::Duration
-# Time-stamp: "2002-08-27 20:19:26 MDT"
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
 require 5.004;

@@ -1,5 +1,4 @@
 README for Time::Duration
-                                        Time-stamp: "2001-10-25 00:05:53 MDT"
 
 NAME
     Time::Duration -- rounded or exact English expression of durations
@@ -163,7 +162,7 @@ SEE ALSO
     days". This is because no-one ever told him to use Time::Duration.
 
 COPYRIGHT AND DISCLAIMER
-    Copyright 2001, Sean M. Burke `sburke@cpan.org', all rights
+    Copyright 2006, Sean M. Burke `sburke@cpan.org', all rights
     reserved. This program is free software; you can redistribute it
     and/or modify it under the same terms as Perl itself.
 
@@ -172,7 +171,8 @@ COPYRIGHT AND DISCLAIMER
     merchantability or fitness for a particular purpose.
 
 AUTHOR
-    Sean M. Burke, `sburke@cpan.org'
+    Original Author: Sean M. Burke, `sburke@cpan.org'
+		Maintainer: Avi Finkel, `avi@finkel.org'
 
 
 
@@ -217,7 +217,7 @@ MacPerl site_lib or lib directory, and move Duration.pm into there.
 SUPPORT
 
 Questions, bug reports, useful code bits, and suggestions for
-Time::Duration should just be sent to me at sburke@cpan.org
+Time::Duration should just be sent to me at avi@finkel.org
 
 
 AVAILABILITY
