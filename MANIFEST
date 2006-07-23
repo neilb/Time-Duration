@@ -4,5 +4,7 @@ MANIFEST
 MANIFEST.SKIP
 Makefile.PL
 README
-t/tdur.t
+t/01_tdur.t
+t/02_pod.t
+t/03_pod_cover.t
 META.yml                                 Module meta-data (added by MakeMaker)
