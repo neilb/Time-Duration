@@ -1,5 +1,9 @@
 Revision history for Perl extension Time::Duration
 
+2007-08-18  Avi Finkel     avi@finkel.org
+
+  * Release 1.06 -- Fixing Makefile
+
 2006-07-23  Avi Finkel     avi@finkel.org
 
   * Release 1.04 -- Reorganizing tests
