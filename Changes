@@ -1,0 +1,23 @@
+Revision history for Perl module Time::Duration
+
+1.1_01 2015-04-18 NEILB
+    - Reformatted this file as per CPAN::Changes::Spec
+
+1.1 2013-04-02 AVIF
+	- Adding millisecond support.
+
+1.06 2007-08-19 AVIF
+	- Fixing Makefile
+
+1.04 2006-07-23 AVIF
+    - Reorganizing tests
+
+1.03 2006-02-28 AVIF
+	- Updating new maintainer information (AVIF took over from SBURKE)
+
+1.02 2002-10-08 SBURKE
+    - added concise().
+	
+1.01 2001-10-25 SBURKE
+    - First release to CPAN
+
