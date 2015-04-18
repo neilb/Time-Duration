@@ -1,6 +1,8 @@
 Revision history for Perl module Time::Duration
 
 1.1_01 2015-04-18 NEILB
+    - Switched to Dist::Zilla, in the process fixing RT#90701, RT#101548,
+      and RT#101434
     - Reformatted this file as per CPAN::Changes::Spec
 
 1.1 2013-04-02 AVIF
