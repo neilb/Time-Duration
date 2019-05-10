@@ -468,8 +468,11 @@ merchantability or fitness for a particular purpose.
 
 =head1 AUTHOR
 
-Current maintainer Avi Finkel, C<avi@finkel.org>; Original author
-Sean M. Burke, C<sburke@cpan.org>
+Original author Sean M. Burke, C<sburke@cpan.org>.
+
+Then maintained by Avi Finkel, C<avi@finkel.org>.
+
+Currently maintained by Neil Bowers, C<neilb@cpan.org>.
 
 =cut
 
