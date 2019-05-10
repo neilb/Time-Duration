@@ -441,6 +441,9 @@ be a great problem for most purposes.
 
 =head1 SEE ALSO
 
+L<Time::Elapsed> - similarly converts durations to natural language,
+but in addition to English also supports Danish, German, French, and Turkish.
+
 L<Date::Interval|Date::Interval>, which is similarly named, but does
 something rather different.
 
