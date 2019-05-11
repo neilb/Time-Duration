@@ -31,22 +31,14 @@ sub concise ($) {
   return $string;
 }
 
-sub later {
-  interval(      $_[0], $_[1], ' earlier', ' later', 'right then'); }
-sub later_exact {
-  interval_exact($_[0], $_[1], ' earlier', ' later', 'right then'); }
-sub earlier {
-  interval(      $_[0], $_[1], ' later', ' earlier', 'right then'); }
-sub earlier_exact {
-  interval_exact($_[0], $_[1], ' later', ' earlier', 'right then'); }
-sub ago {
-  interval(      $_[0], $_[1], ' from now', ' ago', 'right now'); }
-sub ago_exact {
-  interval_exact($_[0], $_[1], ' from now', ' ago', 'right now'); }
-sub from_now {
-  interval(      $_[0], $_[1], ' ago', ' from now', 'right now'); }
-sub from_now_exact {
-  interval_exact($_[0], $_[1], ' ago', ' from now', 'right now'); }
+sub later          { interval(      $_[0], $_[1], ' earlier',  ' later',    'right then'); }
+sub later_exact    { interval_exact($_[0], $_[1], ' earlier',  ' later',    'right then'); }
+sub earlier        { interval(      $_[0], $_[1], ' later',    ' earlier',  'right then'); }
+sub earlier_exact  { interval_exact($_[0], $_[1], ' later',    ' earlier',  'right then'); }
+sub ago            { interval(      $_[0], $_[1], ' from now', ' ago',      'right now');  }
+sub ago_exact      { interval_exact($_[0], $_[1], ' from now', ' ago',      'right now');  }
+sub from_now       { interval(      $_[0], $_[1], ' ago',      ' from now', 'right now');  }
+sub from_now_exact { interval_exact($_[0], $_[1], ' ago',      ' from now', 'right now');  }
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 sub duration_exact {
