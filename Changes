@@ -3,6 +3,7 @@ Revision history for Perl module Time::Duration
 1.21 2019-05-11 NEILB
     - Added Time::Elapsed to SEE ALSO, suggested by Ron Savage in RT#122186.
     - Updated AUTHOR section to reflect that Neil Bowers is current maintainer.
+    - Extended testsuite so there's full code coverage (not pod yet).
 
 1.20 2015-04-25 NEILB
     - Switched to Dist::Zilla, in the process fixing RT#90701, RT#101548,
