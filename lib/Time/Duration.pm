@@ -250,7 +250,7 @@ This module provides functions for expressing durations in rounded or exact
 terms.
 
 
-In the first example in the Synopsis, using duration($interval_seconds):
+In the first example in the L</SYNOPSIS>, using duration($interval_seconds):
 
 If the C<time() - $start_time> is 3 seconds, this prints
 "Runtime: B<3 seconds>.".  If it's 0 seconds, it's "Runtime: B<0 seconds>.".
